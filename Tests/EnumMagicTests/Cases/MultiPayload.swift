@@ -36,6 +36,7 @@ enum IntDoubleOrBignum {  // => LLVM <{ i64, i2 }>
   case Badussy            // => <{ i64, i2 }> {           0,               3 }
   case Thrussy            // => <{ i64, i2 }> {           1,               3 }
   case ASDFA(Int, Bignum)
+  case OtherInt(Int)
 }
 
 enum OtherEnum {

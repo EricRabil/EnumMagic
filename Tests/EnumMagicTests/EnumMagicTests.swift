@@ -48,6 +48,12 @@ final class EnumMagicTests: XCTestCase {
         default:
             XCTFail()
         }
+        
+        switch CreateEnum(IntDoubleOrBignum.self, caseName: "OtherInt", payload: [12]) {
+        case .OtherInt(let otherInt):
+            XCTAssertEqual(otherInt, 12)
+        default: XCTFail()
+        }
     }
     
     func testMultiPayloadEmptyPayloadSegment() {
